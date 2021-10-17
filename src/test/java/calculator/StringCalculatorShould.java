@@ -24,4 +24,10 @@ class StringCalculatorShould {
         assertEquals(5, stringCalculator.add("2,3"));
     }
     
+    @Test
+    void string_with_multiple_numbers_delimited_by_comma_return_number_as_int() {
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(9, stringCalculator.add("5,1,3"));
+    }
+    
 }
