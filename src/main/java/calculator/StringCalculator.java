@@ -46,7 +46,11 @@ class StringCalculator {
 	    }
 
 	private boolean isNumeric(String string) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+		 try {
+	            Double.parseDouble(string);
+	        } catch (NumberFormatException nfe) {
+	            return false;
+	        }
+	        return true;
+	    }
 }
