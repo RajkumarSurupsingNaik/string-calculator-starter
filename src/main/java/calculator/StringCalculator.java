@@ -29,14 +29,24 @@ class StringCalculator {
 	                total += num;
 	            }
 	        }
-	        if (!negatives.isEmpty()) {
-	            throw new IllegalArgumentException(
-	                "negatives not allowed " + String.join(",", negatives));
-	        }
 	        return total;
 	    }
 
 	private char getCustomDelimiter(String string) {
-		return 0;
+		 if (string == null || string.isEmpty()) {
+	            return ',';
+	        }
+	        if (isNumeric(string)) {
+	            return ',';
+	        }
+	        if (string.length() == 1) {
+	            return string.charAt(0);
+	        }
+	        return ',';
+	    }
+
+	private boolean isNumeric(String string) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }
