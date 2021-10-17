@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class StringCalculator {
-	 public int calculate(String input) {
+	 public int add(String input) {
 	        List<String> negatives = new ArrayList<String>();
 
 	        if (input == null || input.isEmpty()) {
