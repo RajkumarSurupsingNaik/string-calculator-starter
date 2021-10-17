@@ -48,4 +48,17 @@ class StringCalculatorShould {
     	StringCalculator stringCalculator = new StringCalculator();
         assertEquals(6, stringCalculator.add("1\n2,3"));
     }
+    
+    @Test
+    public void string_with_negative_Not_Supported() {
+    	StringCalculator stringCalculator = new StringCalculator();
+        try {
+        	stringCalculator.add("-3;5");
+            fail("exception should have been thrown");
+        }
+        catch (IllegalArgumentException e) {
+            assertEquals("negatives not allowed -3", e.getMessage());
+        }
+    }
+
 }

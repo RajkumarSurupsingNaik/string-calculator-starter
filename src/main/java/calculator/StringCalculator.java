@@ -29,6 +29,10 @@ class StringCalculator {
 	                total += num;
 	            }
 	        }
+	        if (!negatives.isEmpty()) {
+	            throw new IllegalArgumentException(
+	                "negatives not allowed " + String.join(",", negatives));
+	        }
 	        return total;
 	    }
 
